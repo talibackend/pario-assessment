@@ -18,13 +18,6 @@ Apartment.init({
     landlord : {
         type : DataTypes.STRING,
         allowNull : true
-    },
-    posted_by : {
-        type : DataTypes.INTEGER,
-        references : {
-            model : User,
-            key : "id"
-        }
     }
 }, {sequelize : dbInstance});
 module.exports = Apartment;
