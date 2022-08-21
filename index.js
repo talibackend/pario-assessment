@@ -1,1 +1,3 @@
-console.log("Hello world");
+const dbInstance = require("./database/sequelize");
+
+
