@@ -18,5 +18,5 @@ Apartment.init({
         type : DataTypes.STRING,
         allowNull : true
     }
-});
+}, {sequelize : dbInstance});
 module.exports = Apartment;
