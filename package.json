@@ -1,0 +1,26 @@
+{
+  "name": "pario-assessment",
+  "version": "1.0.0",
+  "description": "This is my solution to the assessment test.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/talibackend/pario-assessment.git"
+  },
+  "author": "Femi Fatokun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/talibackend/pario-assessment/issues"
+  },
+  "homepage": "https://github.com/talibackend/pario-assessment#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "sequelize": "^6.21.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
