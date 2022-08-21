@@ -7,7 +7,9 @@ const apartments = require("./database/apartments");
 const express = require("express");
 const app = express();
 const httpServer = require("http");
+const usersRoutes = require("./routes/user");
 
+app.use("user", usersRoutes);
 
 dbInstance.sync({force : true}).then(async ()=>{
     console.log("Database ready...");
