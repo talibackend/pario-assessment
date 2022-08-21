@@ -2,9 +2,9 @@ const {Model, DataTypes} = require("sequelize");
 const dbInstance = require("../database/sequelize");
 const Review = require("./Review");
 
-class ReviewMedia extends Model {}
+class ReviewHelpful extends Model {}
 
-ReviewMedia.init({
+ReviewHelpful.init({
     id : {
         type : DataTypes.INTEGER,
         primaryKey : true,
@@ -18,8 +18,9 @@ ReviewMedia.init({
             key : "id"
         }
     },
-    media_type : {
-        type : DataTypes.ENUM('video', 'image')
+    ip_address : {
+        type : DataTypes.STRING,
+        allowNull : false
     }
 }, {sequelize : dbInstance});
-module.exports = ReviewMedia;
+module.exports = ReviewHelpful;

@@ -33,10 +33,6 @@ Review.init({
     },
     others : {
         type : DataTypes.TEXT
-    },
-    helpful_count : {
-        type : DataTypes.BIGINT,
-        defaultValue : 0
     }
 }, {sequelize : dbInstance});
 module.exports = Review;
