@@ -9,6 +9,8 @@ const app = express();
 const httpServer = require("http");
 const usersRoutes = require("./routes/user");
 
+
+app.use(express.json());
 app.use("/user", usersRoutes);
 
 dbInstance.sync({force : true}).then(async ()=>{

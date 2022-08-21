@@ -1,8 +1,11 @@
 class UsersController{
     async signup(req, res){
-        console.log(req);
-        console.log(res);
-        console.log(next);
+        const body = req.body;
+        console.log(body);
+        return res.json(body);
+    }
+    async login(req, res){
+
     }
 }
 module.exports = UsersController;
