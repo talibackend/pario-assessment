@@ -22,14 +22,6 @@ Token.init({
     token : {
         type : DataTypes.TEXT,
         allowNull : false
-    },
-    created_at : {
-        type : DataTypes.TIME,
-        allowNull : false
-    },
-    updated_at : {
-        type : DataTypes.TIME,
-        allowNull : false
     }
 }, {sequelize : dbInstance});
 

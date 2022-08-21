@@ -21,10 +21,6 @@ User.init({
     password : {
         type : DataTypes.TEXT,
         allowNull : false
-    },
-    created_at : {
-        type : DataTypes.TIME,
-        allowNull : false
     }
 }, {sequelize : dbInstance});
 
