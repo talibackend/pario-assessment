@@ -32,3 +32,5 @@ Token.init({
         allowNull : false
     }
 }, {sequelize : dbInstance});
+
+module.exports = Token;

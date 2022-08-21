@@ -19,3 +19,4 @@ Apartment.init({
         allowNull : true
     }
 });
+module.exports = Apartment;
