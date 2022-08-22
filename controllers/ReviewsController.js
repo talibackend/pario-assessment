@@ -60,7 +60,7 @@ class ReviewsController{
                     review.helpful_count = review.helpful_count + 1;
                     await review.save();
                 }
-                return res.status(200).json({ok : true, message : "Review has been added."});
+                return res.status(200).json({ok : true, message : "Review has been marked has helpful."});
             }
         }
     }
