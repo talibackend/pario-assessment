@@ -13,6 +13,9 @@ const usersRoutes = require("./routes/user");
 const reviewsRoutes = require("./routes/review");
 
 UserModel.hasMany(TokenModel);
+UserModel.hasMany(ReviewModel)
+ReviewModel.hasMany(ReviewMediaModel);
+ReviewModel.hasMany(ReviewHelpfulModel);
 
 app.use(express.json());
 app.use("/user", usersRoutes);
