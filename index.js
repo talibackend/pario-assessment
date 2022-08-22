@@ -28,3 +28,4 @@ dbInstance.sync({force : false}).then(async ()=>{
     app.listen(process.env.PORT, "0.0.0.0", ()=>{console.log(`Server running on :${process.env.PORT}`)});
     httpServer.createServer(app);
 }).catch(err=>console.log(err))
+
