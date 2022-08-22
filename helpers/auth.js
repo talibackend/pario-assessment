@@ -4,7 +4,7 @@ const helper = require("./general");
 
 module.exports = {
     login : async (email, password)=>{
-        let user = await User.findOne({where : { email : body.email }});
+        let user = await User.findOne({where : { email : email }});
         if(!user){
             return false;
         }else{
