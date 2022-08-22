@@ -21,8 +21,10 @@ app.use(express.json());
 app.use("/user", usersRoutes);
 app.use("/review", reviewsRoutes);
 
+app.get('/', (req, res)=>{res.send("<h1>Deployment successful!</h1>")});
+
 dbInstance.sync({force : false}).then(async ()=>{
     console.log("Database ready...");
-    app.listen(process.env.PORT, ()=>{console.log(`Server running on :${process.env.PORT}`)});
+    app.listen(process.env.PORT, "0.0.0.0", ()=>{console.log(`Server running on :${process.env.PORT}`)});
     httpServer.createServer(app);
 }).catch(err=>console.log(err))
