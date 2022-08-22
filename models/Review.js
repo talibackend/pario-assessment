@@ -22,6 +22,10 @@ Review.init({
         type : DataTypes.TEXT,
         allowNull : false
     },
+    overview : {
+        type : DataTypes.TEXT,
+        allowNull : false
+    },
     landlord_conduct : {
         type : DataTypes.TEXT
     },
@@ -29,9 +33,6 @@ Review.init({
         type : DataTypes.TEXT
     },
     quality_of_amenities : {
-        type : DataTypes.TEXT
-    },
-    others : {
         type : DataTypes.TEXT
     }
 }, {sequelize : dbInstance});

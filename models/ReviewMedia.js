@@ -20,6 +20,9 @@ ReviewMedia.init({
     },
     media_type : {
         type : DataTypes.ENUM('video', 'image')
+    },
+    media_url : {
+        type : DataTypes.STRING
     }
 }, {sequelize : dbInstance});
 module.exports = ReviewMedia;

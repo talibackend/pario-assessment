@@ -15,7 +15,7 @@ class UsersController{
         if(!helper.validateEmail(body.email)){
             return res.status(400).json({ok : false, message : `Invalid email provided.`});
         }else{
-            let searchUser = await User.findOne({email : body.email});
+            let searchUser = await User.findOne({where : { email : body.email }});
             if(searchUser){
                 return res.status(400).json({ok : false, message : `Email has already been used`});
             }else{
@@ -45,7 +45,7 @@ class UsersController{
             if(body.password.length < 6){
                 return res.status(400).json({ok : false, message : `Password can not be less that 6 characters.`});
             }else{
-                let user = await User.findOne({email : body.email});
+                let user = await User.findOne({where : { email : body.email }});
                 let token = await auth.login(body.email, body.password);
                 if(!token){
                     return res.status(401).json({ok : false, message : "Invalid login credential."});
