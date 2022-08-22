@@ -43,7 +43,7 @@ class UsersController{
             return res.status(400).json({ok : false, message : `Invalid email provided.`});
         }else{
             if(body.password.length < 6){
-                return res.status(400).json({ok : false, message : `Password can not be less that 6 characters.`});
+                return res.status(400).json({ok : false, message : `Password can not be less than 6 characters.`});
             }else{
                 let user = await User.findOne({where : { email : body.email }});
                 let token = await auth.login(body.email, body.password);

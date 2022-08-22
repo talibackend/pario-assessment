@@ -8,7 +8,7 @@ module.exports = {
         if(!user){
             return false;
         }else{
-            if(!helper.dehashPassword(password, user.password)){
+            if(!await helper.dehashPassword(password, user.password)){
                 return false;
             }else{
                 let token = Token.create({user_id : user.id, token : await helper.hashPassword(helper.generateRandom(20))});
