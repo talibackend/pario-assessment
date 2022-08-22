@@ -22,9 +22,10 @@ class UsersController{
                 if(body.password.length < 6){
                     return res.status(400).json({ok : false, message : `Password can not be less that 6 characters.`});
                 }else{
+                    let formerPassword = body.password;
                     body.password = await helper.hashPassword(body.password);
                     let user = await User.create(body);
-                    let token = await auth.login(body.email, body.password);
+                    let token = await auth.login(body.email, formerPassword);
                     return res.status(200).json({ok : true, message : "Registration successful", body : {id : user.id, full_name : body.full_name, email : body.email, token}});
                 }
             }
